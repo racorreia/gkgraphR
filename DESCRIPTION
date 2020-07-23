@@ -7,7 +7,7 @@ Description: A simple way to interact with and extract data from
   the official Google Knowledge Graph API.
 Depends:
   R (>= 3.4.0)
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 Imports:
