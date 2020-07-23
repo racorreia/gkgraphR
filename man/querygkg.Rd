@@ -40,8 +40,8 @@ Performs a query on the Google Knowledge Graph API
 }
 \examples{
 #Run a text-based query for the term "apple"
-querygkg(query = "apple", api.key = "YOUR_API_KEY")
+#querygkg(query = "apple", api.key = "YOUR_API_KEY")
 
 #Run an ID-based query for the entity "apple"
-querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
+#querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
 }
