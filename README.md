@@ -1,5 +1,9 @@
 # gkgraphR
+
+<!-- badges: start -->
+[![R build status](https://github.com/racorreia/gkgraphR/workflows/R-CMD-check/badge.svg)](https://github.com/racorreia/gkgraphR/actions)
 [![Build Status](https://travis-ci.org/racorreia/gkgraphR.svg?branch=master)](https://travis-ci.org/racorreia/gkgraphR)
+<!-- badges: end -->
 
 Easy access to the Google Knowledge Graph API (v1) from R. More information about the Google Knowledge Graph API can be found here: https://developers.google.com/knowledge-graph
 

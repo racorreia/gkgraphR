@@ -24,7 +24,7 @@
 #' # Run an ID-based query for the entity "apple" representing the fruit
 #' #querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
 #'
-#' # Run an ID-based query for the entity "apple" representing the fruit and get the original JSON object returned by the API
+#' # Run an ID-based query and get the original JSON object returned by the API
 #' #querygkg(ids = "/m/014j1m", json = TRUE, api.key = "YOUR_API_KEY")
 #'
 #' ## End(Not run)

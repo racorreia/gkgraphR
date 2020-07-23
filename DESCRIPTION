@@ -2,9 +2,7 @@ Package: gkgraphR
 Title: Accessing the official Google Knowledge Graph API
 Version: 1.0.00
 Date: 2020-07-21
-Authors@R: c(person("Ricardo", "Correia", email = "rahc85@gmail.com", role = c("aut","cre")))
-Author: Ricardo Correia
-Maintainer: Ricardo Correia <rahc85@gmail.com>
+Authors@R: person("Ricardo", "Correia", email = "rahc85@gmail.com", role = c("aut","cre"), comment = c(ORCID = "0000-0001-7359-9091"))
 Description: A simple way to interact with and extract data from
   the official Google Knowledge Graph API.
 Depends:
@@ -20,5 +18,6 @@ Imports:
   ISOcodes(>= 2020.03.16)
 Suggests:
   knitr,
-  rmarkdown
+  rmarkdown,
+  qpdf
 VignetteBuilder: knitr

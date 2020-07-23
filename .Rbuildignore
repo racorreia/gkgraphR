@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 ^doc$
 ^Meta$
+.travis.yml
+cran-comments.md
+^\.github$
