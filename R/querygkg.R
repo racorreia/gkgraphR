@@ -7,7 +7,8 @@
 #' @param indent Enables indenting of JSON results.
 #' @param prefix Enables prefix (initial substring) match against names and aliases of entities. For example, a prefix `Jung` will match entities and aliases such as `Jung`, `Jungle`, and `Jung-ho Kang`.
 #' @param limit A numeric value limiting the number of entities to be returned. Maximum is 500. Default is 20. Requests with high limits have a higher chance of timing out.
-#' @param json Defines whether results should be returned as json or data.frame object. Default is FALSE and returns a data.frame object.
+#' @param json Defines whether the API query should be returned in the original JSON format (TRUE) or as an R object (FALSE). Defaults to FALSE.
+#' @param itemList Should the query contain only the Google Knowledge Graph item list returned by the query? Defaults to TRUE. Only valid when returning R objects (i.e. parameter json = FALSE).
 #' @param api.key A Google API key.
 #'
 #' @return Returns the Google Knowledge Graph output.
@@ -16,16 +17,19 @@
 #' @examples
 #' # Do not run
 #' # Function querygkg requires a valid Google API key to work
-
+#'
 #' # Run a text-based query for the term "apple"
 #' # querygkg(query = "apple", api.key = "YOUR_API_KEY")
 #'
 #' # Run an ID-based query for the entity "apple"
 #' # querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
+#'
+#' # Run an ID-based query for the entity "apple" and get the original JSON object returned by the API
+#' # querygkg(ids = "/m/014j1m", json = TRUE, api.key = "YOUR_API_KEY")
 
 
 
-querygkg <- function(query=NULL, ids=NULL, lang=NULL, types=NULL, indent=NULL, prefix=NULL, limit = NULL, json = FALSE, api.key) {
+querygkg <- function(query=NULL, ids=NULL, lang=NULL, types=NULL, indent=NULL, prefix=NULL, limit = NULL, json = FALSE, itemList = TRUE, api.key) {
 
   #Base link of API call
   link <- "https://kgsearch.googleapis.com/v1/entities:search?"
@@ -146,7 +150,13 @@ querygkg <- function(query=NULL, ids=NULL, lang=NULL, types=NULL, indent=NULL, p
   if(json == FALSE){
     #Convert data to JSON format
     res <- jsonlite::fromJSON(httr::content(res, as = "text"), flatten = T)
+
+    if (itemList == TRUE){
+      # Select only the item list returned by the query
+      res <- res$itemListElement
+    }
   }
 
+  # Returns the final output
   return(res)
 }

@@ -13,6 +13,7 @@ querygkg(
   prefix = NULL,
   limit = NULL,
   json = FALSE,
+  itemList = TRUE,
   api.key
 )
 }
@@ -31,7 +32,9 @@ querygkg(
 
 \item{limit}{A numeric value limiting the number of entities to be returned. Maximum is 500. Default is 20. Requests with high limits have a higher chance of timing out.}
 
-\item{json}{Defines whether results should be returned as json or data.frame object. Default is FALSE and returns a data.frame object.}
+\item{json}{Defines whether the API query should be returned in the original JSON format (TRUE) or as an R object (FALSE). Defaults to FALSE.}
+
+\item{itemList}{Should the query contain only the Google Knowledge Graph item list returned by the query? Defaults to TRUE. Only valid when returning R objects (i.e. parameter json = FALSE).}
 
 \item{api.key}{A Google API key.}
 }
@@ -44,9 +47,13 @@ Performs a query on the Google Knowledge Graph API
 \examples{
 # Do not run
 # Function querygkg requires a valid Google API key to work
+
 # Run a text-based query for the term "apple"
 # querygkg(query = "apple", api.key = "YOUR_API_KEY")
 
 # Run an ID-based query for the entity "apple"
 # querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
+
+# Run an ID-based query for the entity "apple" and get the original JSON object returned by the API
+# querygkg(ids = "/m/014j1m", json = TRUE, api.key = "YOUR_API_KEY")
 }
