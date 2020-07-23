@@ -12,4 +12,10 @@ devtools::install_github("racorreia/gkgraphR")
 ```
 
 ## Accessing the API
-In order to access the API, users register to obtain an API key.
+
+In order to access the API, users register a Google account and create a project in the Google API console to obtain an API key. More information on how to register an account and create a project can be found here: https://developers.google.com/knowledge-graph/prereqs
+
+## Querying the API
+
+
+
