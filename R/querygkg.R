@@ -19,13 +19,13 @@
 #' # Note: Function querygkg requires a valid Google API key to work
 #'
 #' # Run a text-based query for the term "apple"
-#' querygkg(query = "apple", api.key = "YOUR_API_KEY")
+#' #querygkg(query = "apple", api.key = "YOUR_API_KEY")
 #'
 #' # Run an ID-based query for the entity "apple" representing the fruit
-#' querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
+#' #querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
 #'
 #' # Run an ID-based query for the entity "apple" representing the fruit and get the original JSON object returned by the API
-#' querygkg(ids = "/m/014j1m", json = TRUE, api.key = "YOUR_API_KEY")
+#' #querygkg(ids = "/m/014j1m", json = TRUE, api.key = "YOUR_API_KEY")
 #'
 #' ## End(Not run)
 
