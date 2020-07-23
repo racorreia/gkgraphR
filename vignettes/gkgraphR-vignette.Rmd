@@ -4,7 +4,7 @@ author: "Ricardo Correia"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{gkgraphR}
+  %\VignetteIndexEntry{Using gkgraphR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 # Introduction to gkgraphR
 
-**gkgraphR** was created to provide an easy means to interact with the Google Knowledge Graph API through R software. Simplicity is at the core of **gkgraphR** and the package provides a single function (`querygkg()`) used to query the API. This powerful function includes all the relevant API query parameters, as well as options to customize the returned output.
+**gkgraphR** was created to provide an easy means to interact with the Google Knowledge Graph API through R software. Simplicity is at the core of **gkgraphR** and the package provides a single function `querygkg()` used to query the API. This powerful function includes all the relevant API query parameters, as well as options to customize the returned output.
 
 ## Before starting
 
@@ -35,7 +35,7 @@ devtools::install_github("racorreia/gkgraphR")
 
 ## Querying the API
 
-Querying the Google Knowledge Graph API through **gkgraphR** can be achieved through the function (`querygkg()`). A simple query requires a valid Google API key and one of two elements: i) a search query, or ii) a Google Knowledge Graph entity ID. For example, a simple list of entities recognized by the Google Knowledge Graph API in relation to the term "apple" can be achieved with the following code:
+Querying the Google Knowledge Graph API through **gkgraphR** can be achieved through the function `querygkg()`. A simple query requires a valid Google API key and one of two elements: i) a search query, or ii) a Google Knowledge Graph entity ID. For example, a simple list of entities recognized by the Google Knowledge Graph API in relation to the term "apple" can be achieved with the following code:
 
 ```{r, eval = FALSE}
 # Load gkgraphR library
@@ -55,7 +55,7 @@ query_apple_fruit <- querygkg(ids = "/m/014j1m", api.key = {YOUR_API_KEY}) # Rep
 query_apple_company <- querygkg(ids = "/m/0k8z", api.key = {YOUR_API_KEY}) # Replace YOUR_API_KEY with a valid Google API key
 ```
 
-It is possible to further refine the queries based on additional parameters. For example, it is possible to refine the query based on the language of the query term or the type of objects to be returned. Further details on valid inputs for each parameter can be found on the help file by running (`?querygkg`).
+It is possible to further refine the queries based on additional parameters. For example, it is possible to refine the query based on the language of the query term or the type of objects to be returned. Further details on valid inputs for each parameter can be found on the help file by running `?querygkg`.
 
 ```{r, eval = FALSE}
 # Query the API for entities related to the term "manzana" in Spanish
@@ -72,7 +72,7 @@ The default number of results returned by the API call is 20 to limit the possib
 query_apple_limit <- querygkg(query = "apple", limit = 50, api.key = {YOUR_API_KEY}) # Replace YOUR_API_KEY with a valid Google API key
 ```
 
-Finally, the default behavior of function (`querygkg`) is to return a subset of the API call containing a single data.frame with the list of entities returned by the API. However, it is also possible to alter this behavior to return the original JSON object obtained from the API or to return the full object returned by the API converted into an R object.
+Finally, the default behavior of function `querygkg()` is to return a subset of the API call containing a single data.frame with the list of entities returned by the API. However, it is also possible to alter this behavior to return the original JSON object obtained from the API or to return the full object returned by the API converted into an R object.
 
 ```{r, eval = FALSE}
 # Return the original JSON object obtained from the API
