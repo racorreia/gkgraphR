@@ -1,0 +1,9 @@
+language: r
+cache: packages
+r_packages:
+- jsonlite
+- httr
+- dplyr
+- maps
+- ISOcodes
+warnings_are_errors: false
