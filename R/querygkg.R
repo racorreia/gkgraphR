@@ -2,12 +2,12 @@
 #'
 #' @param query A character string to search for in Google Knowledge Graph.
 #' @param ids A list of one or more entity IDs to search for in Google Knowledge Graph. Should be a Google Knowledge Graph or Freebase ID code in character string format.
-#' @param lang The list of language codes (defined in ISO 639) to run the query with, for instance `en`.
-#' @param types Restricts returned entities to those of the specified types. See schema.org for valid types (e.g. `Person` as defined in http://schema.org/Person restricts the results to entities representing people). If multiple types are specified, returned entities will contain one or more of these types.
-#' @param indent Enables indenting of JSON results.
-#' @param prefix Enables prefix (initial substring) match against names and aliases of entities. For example, a prefix `Jung` will match entities and aliases such as `Jung`, `Jungle`, and `Jung-ho Kang`.
-#' @param limit A numeric value limiting the number of entities to be returned. Maximum is 500. Default is 20. Requests with high limits have a higher chance of timing out.
-#' @param json Defines whether the API query should be returned in the original JSON format (TRUE) or as an R object (FALSE). Defaults to FALSE.
+#' @param lang A character argument defining the language filter. The list of language codes (defined in ISO 639) to run the query with, for instance `en`. Defaults to NULL.
+#' @param types A character argument restricting returned entities to those of the specified types. See schema.org for valid types (e.g. `Person` as defined in http://schema.org/Person restricts the results to entities representing people). If multiple types are specified, returned entities will contain one or more of these types. Defaults to NULL.
+#' @param indent A logical argument enabling indenting of JSON results. Defaults to NULL.
+#' @param prefix A logical argument enabling prefix (initial substring) matching against names and aliases of entities. For example, a prefix `Jung` will match entities and aliases such as `Jung`, `Jungle`, and `Jung-ho Kang`. Defaults to NULL.
+#' @param limit A numeric value limiting the number of entities to be returned. Maximum is 500. Defaults to 20. Please note that requests with high limits have a higher chance of timing out.
+#' @param json A logical argument defining whether the API query should be returned in the original JSON format or as an R object. Defaults to FALSE.
 #' @param itemList Should the query contain only the Google Knowledge Graph item list returned by the query? Defaults to TRUE. Only valid when returning R objects (i.e. parameter json = FALSE).
 #' @param api.key A Google API key.
 #'
@@ -15,17 +15,19 @@
 #' @export
 #'
 #' @examples
-#' # Do not run
-#' # Function querygkg requires a valid Google API key to work
+#' ## Not run:
+#' # Note: Function querygkg requires a valid Google API key to work
 #'
 #' # Run a text-based query for the term "apple"
-#' # querygkg(query = "apple", api.key = "YOUR_API_KEY")
+#' querygkg(query = "apple", api.key = "YOUR_API_KEY")
 #'
-#' # Run an ID-based query for the entity "apple"
-#' # querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
+#' # Run an ID-based query for the entity "apple" representing the fruit
+#' querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
 #'
-#' # Run an ID-based query for the entity "apple" and get the original JSON object returned by the API
-#' # querygkg(ids = "/m/014j1m", json = TRUE, api.key = "YOUR_API_KEY")
+#' # Run an ID-based query for the entity "apple" representing the fruit and get the original JSON object returned by the API
+#' querygkg(ids = "/m/014j1m", json = TRUE, api.key = "YOUR_API_KEY")
+#'
+#' ## End(Not run)
 
 
 
