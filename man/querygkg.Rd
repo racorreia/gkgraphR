@@ -12,13 +12,14 @@ querygkg(
   indent = NULL,
   prefix = NULL,
   limit = NULL,
+  json = FALSE,
   api.key
 )
 }
 \arguments{
 \item{query}{A character string to search for in Google Knowledge Graph.}
 
-\item{ids}{A list of one or more entity IDs to search for in Google Knowledge Graph. Should ba a Google Knowledge Graph or Freebase ID code in character string format.}
+\item{ids}{A list of one or more entity IDs to search for in Google Knowledge Graph. Should be a Google Knowledge Graph or Freebase ID code in character string format.}
 
 \item{lang}{The list of language codes (defined in ISO 639) to run the query with, for instance `en`.}
 
@@ -30,18 +31,22 @@ querygkg(
 
 \item{limit}{A numeric value limiting the number of entities to be returned. Maximum is 500. Default is 20. Requests with high limits have a higher chance of timing out.}
 
+\item{json}{Defines whether results should be returned as json or data.frame object. Default is FALSE and returns a data.frame object.}
+
 \item{api.key}{A Google API key.}
 }
 \value{
-Returns the Google Knwoledge Graph output.
+Returns the Google Knowledge Graph output.
 }
 \description{
 Performs a query on the Google Knowledge Graph API
 }
 \examples{
-#Run a text-based query for the term "apple"
-#querygkg(query = "apple", api.key = "YOUR_API_KEY")
+# Do not run
+# Function querygkg requires a valid Google API key to work
+# Run a text-based query for the term "apple"
+# querygkg(query = "apple", api.key = "YOUR_API_KEY")
 
-#Run an ID-based query for the entity "apple"
-#querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
+# Run an ID-based query for the entity "apple"
+# querygkg(ids = "/m/014j1m", api.key = "YOUR_API_KEY")
 }
