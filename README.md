@@ -13,7 +13,7 @@ You can obtain the current development version from github:
 
 ```
 # install.packages("devtools")
-devtools::install_github("racorreia/gkgraphR")
+devtools::install_github("racorreia/gkgraphR", build_vignettes = T)
 ```
 
 ## Querying the API
