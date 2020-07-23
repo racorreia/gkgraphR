@@ -4,7 +4,7 @@ Version: 1.0.00
 Date: 2020-07-21
 Authors@R: c(person("Ricardo", "Correia", email = "rahc85@gmail.com", role = c("aut","cre")))
 Author: Ricardo Correia
-maintainer: Ricardo Correia <rahc85@gmail.com>
+Maintainer: Ricardo Correia <rahc85@gmail.com>
 Description: A simple way to interact with and extract data from
   the official Google Knowledge Graph API.
 Depends:
