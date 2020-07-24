@@ -11,6 +11,7 @@ Author: Ricardo Correia
 Maintainer: Ricardo Correia <rahc85@gmail.com>
 Description: A simple way to interact with and extract data from
   the official Google Knowledge Graph API.
+Language: en-US
 Depends:
   R (>= 3.4.0)
 License: MIT + file LICENSE
