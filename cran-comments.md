@@ -19,3 +19,8 @@ There was 1 NOTE:
   Maintainer: 'Ricardo Correia <rahc85@gmail.com>'
 
   I believe this is just an informative note
+
+## Corrections implemented since last version:
+* Corrected leading zeros in package version, now numbered 1.0.1
+* Included CRAN template for MIT license using function usethis::use_mit_license()
+* Added link to the Google Knowledhe Graph API page in the Description field of the DESCRIPTION file
