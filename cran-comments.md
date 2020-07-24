@@ -17,3 +17,5 @@ There was 1 NOTE:
 
 * checking CRAN incoming feasibility ... NOTE
   Maintainer: 'Ricardo Correia <rahc85@gmail.com>'
+
+  I believe this is just an informative note

@@ -7,3 +7,4 @@ cran-comments.md
 ^\.github$
 ^appveyor\.yml$
 ^CRAN-RELEASE$
+^LICENSE\.md$
