@@ -2,6 +2,11 @@ Package: gkgraphR
 Title: Accessing the Official Google Knowledge Graph API
 Version: 1.0.01
 Date: 2020-07-21
+Authors@R: person(given = "Ricardo",
+  family = "Correia",
+  role = c("aut", "cre"),
+  email = "rahc85@gmail.com",
+  comment = c(ORCID = "0000-0001-7359-9091"))
 Author: Ricardo Correia
 Maintainer: Ricardo Correia <rahc85@gmail.com>
 Description: A simple way to interact with and extract data from
