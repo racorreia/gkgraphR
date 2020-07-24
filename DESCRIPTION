@@ -17,10 +17,8 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 Imports:
-  dplyr (>= 0.5.0),
   jsonlite(>= 1.5),
   httr(>= 1.4.1),
-  maps(>= 3.2.0),
   ISOcodes(>= 2020.03.16)
 Suggests:
   knitr,
