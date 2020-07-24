@@ -1,5 +1,8 @@
 language: r
 cache: packages
+os:
+- linux
+- osx
 r_packages:
 - jsonlite
 - httr
