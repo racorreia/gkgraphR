@@ -10,8 +10,4 @@ r_packages:
 - maps
 - ISOcodes
 warnings_are_errors: true
-install:
-- R -e 'devtools::install_deps(dep = T)'
-script:
-- R CMD build .
-- R CMD check *tar.gz
+
