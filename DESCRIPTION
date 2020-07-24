@@ -7,6 +7,8 @@ Author@R: person(given = "Ricardo",
   role = c("aut", "cre"),
   email = "rahc85@gmail.com",
   comment = c(ORCID = "0000-0001-7359-9091"))
+Author: Ricardo Correia
+Maintainer: Ricardo Correia <rahc85@gmail.com>
 Description: A simple way to interact with and extract data from
   the official Google Knowledge Graph API.
 Depends:
