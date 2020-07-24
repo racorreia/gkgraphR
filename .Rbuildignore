@@ -6,3 +6,8 @@
 cran-comments.md
 ^\.github$
 ^appveyor\.yml$
+^CRAN-RELEASE$
+^.github$
+.gitignore
+.Rhistory
+.git
