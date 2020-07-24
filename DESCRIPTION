@@ -5,7 +5,7 @@ Date: 2020-07-21
 Author: Ricardo Correia
 Maintainer: Ricardo Correia <rahc85@gmail.com>
 Description: A simple way to interact with and extract data from
-  the official Google Knowledge Graph API (https://developers.google.com/knowledge-graph/).
+  the official Google Knowledge Graph API <https://developers.google.com/knowledge-graph/>.
 Language: en-US
 Depends:
   R (>= 3.4.0)
