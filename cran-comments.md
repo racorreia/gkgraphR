@@ -11,4 +11,9 @@ date: "23/07/2020"
 * x86_64-w64-mingw32 (on Appveyor) R 4.0.0
 
 ## R CMD check results
-There were no ERRORs, WARNINGs or NOTEs. 
+There were no ERRORs, WARNINGs. 
+
+There was 1 NOTE:
+
+* checking CRAN incoming feasibility ... NOTE
+  Maintainer: 'Ricardo Correia <rahc85@gmail.com>'
