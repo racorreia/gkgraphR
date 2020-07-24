@@ -23,4 +23,4 @@ There was 1 NOTE:
 ## Corrections implemented since last version:
 * Corrected leading zeros in package version, now numbered 1.0.1
 * Included CRAN template for MIT license using function usethis::use_mit_license()
-* Added link to the Google Knowledhe Graph API page in the Description field of the DESCRIPTION file
+* Added link to the Google Knowledge Graph API page in the Description field of the DESCRIPTION file
