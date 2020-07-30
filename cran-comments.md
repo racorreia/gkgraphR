@@ -21,6 +21,6 @@ There was 1 NOTE:
   I believe this is just an informative note
 
 ## Corrections implemented since last version:
-* Corrected leading zeros in package version, now numbered 1.0.1
-* Included CRAN template for MIT license using function usethis::use_mit_license()
-* Added link to the Google Knowledge Graph API page in the Description field of the DESCRIPTION file
+* Included API names in single quotes in title and description
+* Wrapped examples in \dontrun instead of quotes
+* Implemented Authors@R field to declare Author and Maintainer
