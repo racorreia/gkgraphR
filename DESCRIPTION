@@ -10,6 +10,8 @@ Authors@R: person(given = "Ricardo",
 Description: A simple way to interact with and extract data from
   the official 'Google Knowledge Graph' API <https://developers.google.com/knowledge-graph/>.
 Language: en-US
+URL: https://github.com/racorreia/gkgraphR
+BugReports: https://github.com/racorreia/gkgraphR/issues
 Depends:
   R (>= 3.4.0)
 License: MIT + file LICENSE
