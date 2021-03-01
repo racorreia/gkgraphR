@@ -9,6 +9,7 @@
 #' @param limit A numeric value limiting the number of entities to be returned. Maximum is 500. Defaults to 20. Please note that requests with high limits have a higher chance of timing out.
 #' @param json A logical argument defining whether the API query should be returned in the original JSON format or as an R object. Defaults to FALSE.
 #' @param itemList Should the query contain only the Google Knowledge Graph item list returned by the query? Defaults to TRUE. Only valid when returning R objects (i.e. parameter json = FALSE).
+#' @param cleanIDs If the output is an item list, should it return clean IDs? Defaults to TRUE. Only valid when returning an item list (i.e. parameter json = FALSE and parameter itemList = TRUE).
 #' @param api.key A Google API key.
 #'
 #' @return Returns the Google Knowledge Graph output.
@@ -30,7 +31,7 @@
 
 
 
-querygkg <- function(query=NULL, ids=NULL, lang=NULL, types=NULL, indent=NULL, prefix=NULL, limit = NULL, json = FALSE, itemList = TRUE, api.key) {
+querygkg <- function(query=NULL, ids=NULL, lang=NULL, types=NULL, indent=NULL, prefix=NULL, limit = NULL, json = FALSE, itemList = TRUE, cleanIDs = TRUE, api.key) {
 
   #Base link of API call
   link <- "https://kgsearch.googleapis.com/v1/entities:search?"
@@ -155,6 +156,10 @@ querygkg <- function(query=NULL, ids=NULL, lang=NULL, types=NULL, indent=NULL, p
     if (itemList == TRUE){
       # Select only the item list returned by the query
       res <- res$itemListElement
+
+      if(cleanIDs == TRUE){
+        res$`result.@id` <- gsub("kg:", "", res$`result.@id`)
+      }
     }
   }
 

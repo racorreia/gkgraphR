@@ -14,6 +14,7 @@ querygkg(
   limit = NULL,
   json = FALSE,
   itemList = TRUE,
+  cleanIDs = TRUE,
   api.key
 )
 }
@@ -35,6 +36,8 @@ querygkg(
 \item{json}{A logical argument defining whether the API query should be returned in the original JSON format or as an R object. Defaults to FALSE.}
 
 \item{itemList}{Should the query contain only the Google Knowledge Graph item list returned by the query? Defaults to TRUE. Only valid when returning R objects (i.e. parameter json = FALSE).}
+
+\item{cleanIDs}{If the output is an item list, should it return clean IDs? Defaults to TRUE. Only valid when returning an item list (i.e. parameter json = FALSE and parameter itemList = TRUE).}
 
 \item{api.key}{A Google API key.}
 }

@@ -1,7 +1,7 @@
 ---
 title: "cran-comments.md"
 author: "Ricardo Correia"
-date: "23/07/2020"
+date: "01/03/2021"
 ---
 
 ## Test environments
