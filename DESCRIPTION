@@ -1,7 +1,7 @@
 Package: gkgraphR
 Title: Accessing the Official 'Google Knowledge Graph' API
-Version: 1.0.2
-Date: 2021-03-01
+Version: 1.0.3
+Date: 2026-03-04
 Authors@R: person(given = "Ricardo",
                   family = "Correia",
                   email = "rahc85@gmail.com",
